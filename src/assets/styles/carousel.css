@@ -1,0 +1,17 @@
+.carousel-item {
+  height: 890px;
+}
+
+.carousel-item img {
+  max-width: 100%;
+  min-height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.carousel {
+  position: fixed;
+  width: 100%;
+  top: 0;
+}
+/*# sourceMappingURL=carousel.css.map */
