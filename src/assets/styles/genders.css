@@ -1,0 +1,76 @@
+.mainContainer {
+  position: relative;
+  margin-bottom: 16px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(white), to(whitesmoke));
+  background-image: linear-gradient(white, whitesmoke);
+  text-align: center;
+}
+
+.mainContainer .common {
+  position: relative;
+  z-index: 2;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  overflow: hidden;
+  background-color: white;
+  padding-top: 50%;
+  border-radius: 8px;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  width: 400px;
+  height: 600px;
+  margin: 8px;
+}
+
+.mainContainer .common .innerContent {
+  font-size: 80px;
+  font-weight: 600;
+  color: white;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.mainContainer .common img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  max-width: 100%;
+  min-height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  z-index: -2;
+}
+
+.common:hover .innerContent {
+  display: block;
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+  text-shadow: 1px 1px rgba(0, 0, 0, 0.25);
+}
+
+.common:hover img {
+  opacity: 0.5;
+}
+
+@media screen and (max-width: 900px) and (min-width: 700px) {
+  .mainContainer .common {
+    width: 320px;
+    height: 480px;
+  }
+  .mainContainer .common .innerContent {
+    font-size: 64px;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .mainContainer .common {
+    width: 240px;
+    height: 360px;
+  }
+  .mainContainer .common .innerContent {
+    font-size: 48px;
+  }
+}
+/*# sourceMappingURL=genders.css.map */

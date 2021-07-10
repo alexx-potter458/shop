@@ -34,7 +34,7 @@
         <div class="d-flex flex-row flex-nowrap justify-content-between px-5 py-5 position-relative">
             <div class="d-flex flex-row">
                 <a href="">
-                    <div><b>ValStore</b></div>
+                    <div><b>Store</b></div>
                 </a>
                 <div id="categories" class="hideMiddle hideSmall d-flex flex-row text-al">
                     <div v-for="element in categories" :key="element.selector">
@@ -80,7 +80,6 @@
             </div>
     
         </div>
-    <link href="../assets/scripts/dropdown.js" rel="preload" as="script">
     </div>
 
 </template>
@@ -88,7 +87,6 @@
 <script>
 
 export default({
-    mounted() {external.head_script('../assets/scripts/dropdown.js')},
     data() {
         return {
             categories: [{
@@ -108,7 +106,7 @@ export default({
                 subCategories: ['pag1', 'pag2']
             }]
             }
-        }
+    }
 
 })
 
