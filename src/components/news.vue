@@ -1,6 +1,6 @@
 <template>
-    <div>
-        <div class="d-flex flex-column">
+    <div class="d-block position-relative">
+        <div >
             <div class="title py-5">
                 New Arrivals
             </div>
@@ -10,11 +10,6 @@
     </div>
 </template>
 
-<script>
-export default {
-    
-}
-</script>
 
 <style scoped>
 .title {

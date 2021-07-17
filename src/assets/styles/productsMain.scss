@@ -1,0 +1,132 @@
+.productsCategories {
+    .categories {
+        color: gray;   
+        font-weight: 600; 
+    }
+    
+    .allProdSpecial {
+        color: goldenrod;
+        font-weight: 600;
+    }
+    
+    a:hover {
+        color: black;
+        text-decoration: underline;
+    }
+    
+    .main {
+        color: black;
+    }
+}
+
+.containerProducts {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.product {
+
+   
+    padding: 16px;
+    
+
+    .productImg {
+       
+        max-height: 40vw;
+        overflow: hidden;
+        border-radius: 8px;
+        transition: 0.5s;
+        position: relative;
+        box-sizing: border-box;
+        z-index: 1;
+    
+        img {
+            top: 0;
+            left: 0;
+            max-width: 100%;
+            min-height: 100%;
+            object-fit: cover;
+            z-index: -2;
+            transition: 0.5s;
+        }
+        
+        .details {
+            display: block;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 20%;
+            z-index: 3;
+            background-color: rgba(255, 255, 255, 0.8);
+            transform: translate(0, 100%);
+            transition: 0.5s;
+
+            a {
+                font-weight: 600;
+                padding: 8px;
+                margin-top: auto;
+                margin-bottom: auto;
+            }
+            i {
+                padding: 8px;
+            }
+        }
+    }
+    
+    .price {
+        color: gray;
+        font-weight: 500;
+    }
+
+    .stars {
+        i {
+            color: goldenrod;
+        }
+        opacity: 0;
+        transform: translate(0,30%);
+        transition: 0.5s;
+    }
+
+    .secondPic {
+        visibility: hidden;
+        position: absolute;
+    }
+}
+
+.product:hover {
+    .details {
+        transform: translate(0,0);
+    }
+
+    .stars {
+        transform: translate(0,0);
+        opacity: 1;
+    }
+
+    .secondPic {
+        visibility: visible;
+    }
+    .firstPic {
+        opacity: 0;
+    }
+}
+
+@media screen and (min-width: 1150px) {
+    .containerProducts {
+        grid-template-columns: repeat(6, 3fr);
+    }
+}
+
+
+@media screen and (max-width: 1150px) and (min-width: 800px) {
+    .containerProducts {
+        grid-template-columns: repeat(3, 3fr);
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .containerProducts {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
