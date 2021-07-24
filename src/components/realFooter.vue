@@ -66,10 +66,10 @@ export default {
         {
           name: "Your Account",
           subLinks: [
-            "Login",
             "Register",
             "Bye",
             "Wishlist",
+            "Login",
             "Our Products",
             "Checkouts",
           ],

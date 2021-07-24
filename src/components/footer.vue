@@ -89,21 +89,21 @@
 
             <div id="loginForm" class="login">
                 <div>Email</div>
-                <input class="input" type="email" name="" id="">
+                <input class="input" type="email" name="">
                 <div class="d-flex flex-row justify-content-between"><span>Password</span><span>Forgot the pass?</span></div>
-                <input class="input" type="email" name="" id="">
-                <div><input type="checkbox" name="" id=""> Remember me in 30days</div>
+                <input class="input" type="email" name="">
+                <div><input type="checkbox" name=""> Remember me in 30days</div>
                 <button class="submit" type="submit">Login</button>
             </div>
 
             <div id="registerForm" class="register hideForm">
                 <div class="text">Get some real stuff</div>
                 <div>Name</div>
-                <input class="input" type="text" name="" id="">
+                <input class="input" type="text" name="">
                 <div>Email</div>
-                <input class="input" type="email" name="" id="">
+                <input class="input" type="email" name="">
                 <div class="d-flex flex-row justify-content-between"><span>Password</span> <span> Forgot the pass?</span></div>
-                <input class="input" type="email" name="" id="">
+                <input class="input" type="email" name="">
                 <button class="submit" type="submit">Register</button>
             </div>
 
@@ -113,6 +113,7 @@
         </div>
 
         <div id="sideMenu" class="sideMenu p-5">
+            <div id="x"><i class="fas fa-times"></i></div>
             <div class="pl-2 pt-5 pb-5">Shop</div>
             <div class="p-2">Home</div>
             <div class="p-2">Link</div>
@@ -195,7 +196,8 @@ export default({
         side: function() {
             let sideMenuBtn = document.getElementById('sideMenuBtn');
             let sideMenu = document.getElementById('sideMenu');
-            let darkener = document.getElementById('darkener')
+            let darkener = document.getElementById('darkener');
+            let exit = document.getElementById('x');
 
             sideMenuBtn.addEventListener('click', function(){
                 sideMenu.classList.toggle("sideIsActive");
@@ -207,6 +209,12 @@ export default({
                 darkener.classList.remove('darkener');
                 document.body.style.overflow = 'visible';
             })
+            exit.addEventListener('click', function(){
+                sideMenu.classList.remove("sideIsActive");
+                darkener.classList.remove('darkener');
+                document.body.style.overflow = 'visible';
+            })
+            
         }
         
     

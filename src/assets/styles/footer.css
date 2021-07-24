@@ -149,6 +149,25 @@ a {
   background-color: whitesmoke;
   top: 0;
   right: 0;
+  width: 0vw;
+  height: 0vh;
+}
+
+.sideMenu #x {
+  position: absolute;
+  top: 2em;
+  right: 2em;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+
+.sideMenu #x i {
+  font-size: 20px;
+}
+
+.sideMenu #x:hover {
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
 }
 
 .sideIsActive {
