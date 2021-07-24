@@ -3,12 +3,24 @@
         <div class="carousel-inner">
           <div class="carousel-item active">
             <img src="../assets/pictures/carousel/model1.jpg" class="d-block" >
+            <div class="carousel-caption d-none d-md-block mb-5 ml-5">
+              <h5>Get ready for the best</h5>
+              <p>We have free stuff</p>
+            </div>
           </div>
           <div class="carousel-item">
             <img src="../assets/pictures/carousel/model2.jpg" class="d-block">
+            <div class="carousel-caption d-none d-md-block mb-5 ml-5">
+              <h5>Get ready for the best</h5>
+              <p>We have free stuff</p>
+            </div>
           </div>
           <div class="carousel-item">
             <img src="../assets/pictures/carousel/model3.jpg" class="d-block" >
+             <div class="carousel-caption d-none d-md-block mb-5 ml-5">
+              <h5>Get ready for the best</h5>
+              <p>We have free stuff</p>
+            </div>
           </div>
         </div>
 

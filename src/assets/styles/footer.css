@@ -54,6 +54,124 @@ a {
   border-bottom: 1px solid black;
 }
 
+.darkener {
+  position: fixed;
+  visibility: visible;
+  top: 0;
+  left: 0;
+  min-width: 100vw;
+  min-height: 100vh;
+  background-color: rgba(0, 0, 0, 0.55);
+}
+
+.loginForm {
+  visibility: hidden;
+  background-color: white;
+  width: 0;
+  height: 0;
+}
+
+.loginForm .line {
+  width: 550px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 1em;
+  margin-bottom: 1em;
+  height: 1px;
+  background-color: gray;
+}
+
+.loginForm button {
+  outline: none;
+  background: none;
+  border: none;
+}
+
+.loginForm .logReg {
+  margin: 1em;
+  margin-top: 1.8em;
+  font-weight: 600;
+  color: gray;
+  font-size: 24px;
+}
+
+.loginForm .login, .loginForm .register {
+  padding: 1.5em;
+}
+
+.loginForm .login div, .loginForm .register div {
+  padding-bottom: 0.2em;
+}
+
+.loginForm .login .input, .loginForm .register .input {
+  width: 90%;
+  margin-bottom: 1em;
+  background-color: none;
+  color: gray;
+}
+
+.loginForm .input:focus {
+  outline: none;
+}
+
+.loginForm .social {
+  text-align: center;
+}
+
+.loginForm .social i {
+  font-size: 24px;
+  color: gray;
+  border: 1px solid gray;
+  padding: 4px;
+}
+
+.loginForm .submit {
+  border: 1px solid black;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  width: 300px;
+}
+
+.loginForm .active {
+  color: lightgreen;
+}
+
+.loginForm .hideForm {
+  visibility: hidden;
+  width: 0;
+  height: 0;
+  position: absolute;
+}
+
+.sideMenu {
+  visibility: hidden;
+  background-color: whitesmoke;
+  top: 0;
+  right: 0;
+}
+
+.sideIsActive {
+  position: fixed;
+  visibility: visible;
+  width: 25vw;
+  height: 100vh;
+}
+
+.isActive {
+  position: fixed;
+  visibility: visible;
+  margin-left: -280px;
+  top: 3em;
+  left: 50%;
+  width: 600px;
+  height: 650px;
+}
+
+.isActive ~ .darkener {
+  visibility: visible;
+}
+
 @media screen and (max-width: 920px) and (min-width: 550px) {
   .hideMiddle {
     visibility: hidden;

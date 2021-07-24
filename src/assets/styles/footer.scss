@@ -51,7 +51,121 @@ a {
     }
 }
 
+.darkener {
+    position: fixed;
+    visibility: visible;
+    top: 0;
+    left: 0;
+    min-width: 100vw;
+    min-height: 100vh;
+    background-color: rgba(0, 0, 0, 0.55);
 
+}
+.loginForm {
+    visibility: hidden;
+    background-color: white;
+    width: 0;
+    height: 0;
+
+    .line {
+        width: 550px;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 1em;
+        margin-bottom: 1em;
+        height: 1px;
+        background-color: gray;
+    }
+    button {
+        outline: none;
+        background: none;
+        border: none;
+       
+    }
+    .logReg {
+        margin: 1em;
+        margin-top: 1.8em;
+        font-weight: 600;
+        color: gray;
+        font-size: 24px;
+    }
+
+    .login, .register {
+        padding: 1.5em;
+        div {
+            padding-bottom: 0.2em;
+        }
+        .input {
+            width: 90%;
+            margin-bottom: 1em;
+            background-color: none;
+            color: gray;
+            
+        }
+        
+    }
+    .input:focus {
+        outline: none;
+    }
+    .social {
+        text-align: center;
+        i {
+            font-size: 24px;
+            color: gray;
+            border: 1px solid gray;
+            padding: 4px;
+        }
+    }
+
+    .submit {
+        border: 1px solid black;
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+        width: 300px
+    }
+
+    .active {
+        color: lightgreen;
+    }
+
+    .hideForm {
+        visibility: hidden;
+        width: 0;
+        height: 0;
+        position: absolute;
+    }
+}
+
+.sideMenu {
+    visibility: hidden;
+    background-color: whitesmoke;
+    top: 0;
+    right: 0;
+    
+}
+
+.sideIsActive {
+    position: fixed;
+    visibility: visible;
+    width: 25vw;
+    height: 100vh;
+}
+
+.isActive {
+    position: fixed;
+    visibility: visible;
+    margin-left: -280px;
+    top:3em;
+    left: 50%;
+    width: 600px;
+    height: 650px;
+
+    ~.darkener {
+        visibility: visible;
+    }
+    
+}
 
 @media screen and (max-width: 920px) and (min-width: 550px) {
     .hideMiddle {
