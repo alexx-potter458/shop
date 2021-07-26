@@ -3,14 +3,14 @@
         
         <div class="d-flex flex-row justify-content-between flex-wrap py-2" >
             <div class="d-flex flex-wrap flex-row py-2">
-                <a href="" class="categories main mx-2">All products</a>
+                <router-link to="products" class="categories main mx-2">All products</router-link>
                 <a v-for="category in categories" :key="category" href="" class="categories mx-1">{{ category }}</a>
             </div>
-            <a class="allProdSpecial" href="">ALL PRODUCTS</a>
+            <router-link class="allProdSpecial" to="products">ALL PRODUCTS</router-link>
         </div>
 
         <div class="containerProducts">
-            <div class="product"  v-for="product in productsList" :key="product">
+            <router-link to="/product" class="product"  v-for="product in productsList" :key="product">
                 <div class="productImg">
                     <img :src="linkMan" class="firstPic" alt="">
                     <img :src="linkWoman" class="secondPic" alt="">
@@ -42,7 +42,7 @@
                     </div>
                 </div>
                   
-            </div>
+            </router-link>
         </div>
 
     </div>

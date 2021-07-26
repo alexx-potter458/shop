@@ -31,11 +31,11 @@
             </div>
         </div>
     
-        <div class="d-flex flex-row flex-nowrap justify-content-between px-5 py-5 position-relative">
+        <div class="second d-flex flex-row flex-nowrap justify-content-between px-5 pt-5 position-relative">
             <div class="d-flex flex-row">
-                <a href="">
+                <router-link to="/">
                     <div><b>Store</b></div>
-                </a>
+                </router-link>
                 <div id="categories" class="hideMiddle hideSmall d-flex flex-row text-al">
                     <div v-for="element in categories" :key="element.selector">
                         <a class="px-2 selector" style="cursor: pointer;">{{ element.selector }} <i
@@ -80,6 +80,7 @@
             </div>
     
         </div>
+        
         <div id="darkener" class=""></div>
         <div id="form" class="loginForm ">
             <button id="loginBtn" class="logReg active">Login</button>
@@ -215,6 +216,33 @@ export default({
                 document.body.style.overflow = 'visible';
             })
             
+        },
+        dropdown: function() {
+            let select = document.getElementsByClassName('selector')
+
+            for (let selector of select)
+                selector.addEventListener('click', show);
+
+            function show(event) {
+                event.target.classList.toggle('active');
+                for(let selector of select) {
+                    if(selector != event.target && selector.classList.contains('active'))
+                        selector.classList.remove('active');
+                }
+            }
+
+            window.onclick = hide;
+
+            function hide() {
+                if(!event.target.matches('.selector')) {
+                    for (let selector of select) {
+                        if (selector.classList.contains('active'))
+                            selector.classList.remove('active')
+                
+                    }
+                }
+            }
+
         }
         
     
@@ -222,6 +250,7 @@ export default({
     mounted() {
         this.loginForm();
         this.side();
+        this.dropdown();
     }
 })
 

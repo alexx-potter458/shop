@@ -145,19 +145,7 @@ a {
     width: 0vw;
     height: 0vh;
 
-    #x {
-        position: absolute;
-        top: 2em;
-        right: 2em;
-        transition: 0.2s;
-        i {
-            font-size: 20px;
-        }
-    }
-
-    #x:hover {
-        transform: rotate(90deg);
-    }
+    
     
 }
 
@@ -182,6 +170,7 @@ a {
     }
     
 }
+
 
 @media screen and (max-width: 920px) and (min-width: 550px) {
     .hideMiddle {
