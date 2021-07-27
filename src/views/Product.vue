@@ -9,6 +9,7 @@
     </div>
     
     <mainContainer class="m-5"></mainContainer>
+    <productDetails></productDetails>
 
   </div>
 </template>
@@ -17,11 +18,13 @@
 
 import banner from '../components/banner.vue'
 import main from '../components/productMain.vue'
+import details from '../components/productAditionalInfo.vue'
 
 export default {
     components : {
         'banner': banner,
-        'mainContainer': main
+        'mainContainer': main,
+        'productDetails': details
     }
 }
 </script>
