@@ -12,5 +12,8 @@ export default new Router({
     { path: '/', name: 'Home', component: Home },
     { path: '/products', name:'Prdoucts', component: Products },
     { path: '/product', name:'Prdouct', component: Product }
-  ]
+  ],
+  scrollBehavior() {
+    return {x: 0, y: 0}
+}
 })

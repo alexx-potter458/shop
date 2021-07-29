@@ -68,7 +68,7 @@ a {
     height: 0;
 
     .line {
-        width: 550px;
+        width: 450px;
         margin-left: auto;
         margin-right: auto;
         margin-top: 1em;
@@ -84,7 +84,7 @@ a {
     }
     .logReg {
         margin: 1em;
-        margin-top: 1.8em;
+        margin-top: 1em;
         font-weight: 600;
         color: gray;
         font-size: 24px;
@@ -96,7 +96,7 @@ a {
             padding-bottom: 0.2em;
         }
         .input {
-            width: 90%;
+            width: 100%;
             margin-bottom: 1em;
             background-color: none;
             color: gray;
@@ -119,10 +119,11 @@ a {
 
     .submit {
         border: 1px solid black;
+        padding: 1em;
         margin-left: auto;
         margin-right: auto;
         text-align: center;
-        width: 300px
+        width: 100%;
     }
 
     .active {
@@ -162,13 +163,19 @@ a {
     margin-left: -280px;
     top:3em;
     left: 50%;
-    width: 600px;
-    height: 650px;
+    width: 550px;
+    height: 550px;
 
     ~.darkener {
         visibility: visible;
     }
     
+}
+
+.forgot {
+    margin-right: 1em;
+    font-weight: 500;
+    color: goldenrod;
 }
 
 

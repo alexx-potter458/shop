@@ -41,7 +41,7 @@
                         <a class="px-2 selector" style="cursor: pointer;">{{ element.selector }} <i
                                 class="fas fa-chevron-up"></i></a>
                         <div class="dropdown-menu-end shadow m-3 drop">
-                            <a class="dropdown-item" v-for="subcategory in element.subCategories" :key="subcategory">{{ subcategory }}</a>
+                            <router-link to="/products" class="dropdown-item" v-for="subcategory in element.subCategories" :key="subcategory">{{ subcategory }}</router-link>
                             
                         </div>
                     </div>
@@ -91,7 +91,7 @@
             <div id="loginForm" class="login">
                 <div>Email</div>
                 <input class="input" type="email" name="">
-                <div class="d-flex flex-row justify-content-between"><span>Password</span><span>Forgot the pass?</span></div>
+                <div class="d-flex flex-row justify-content-between"><span>Password</span><span class="forgot">Forgot the pass?</span></div>
                 <input class="input" type="email" name="">
                 <div><input type="checkbox" name=""> Remember me in 30days</div>
                 <button class="submit" type="submit">Login</button>
@@ -103,7 +103,7 @@
                 <input class="input" type="text" name="">
                 <div>Email</div>
                 <input class="input" type="email" name="">
-                <div class="d-flex flex-row justify-content-between"><span>Password</span> <span> Forgot the pass?</span></div>
+                <div class="d-flex flex-row justify-content-between"><span>Password</span> <span class="forgot"> Forgot the pass?</span></div>
                 <input class="input" type="email" name="">
                 <button class="submit" type="submit">Register</button>
             </div>
@@ -144,7 +144,7 @@ export default({
                 subCategories: ['Home1', 'Home2', 'Home3']
             }, {
                 selector: 'Shop',
-                subCategories: ['pag1', 'pag2']
+                subCategories: ['Products', 'Products']
             }, {
                 selector: 'Icons',
                 subCategories: ['pag1', 'pag2']
