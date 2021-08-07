@@ -10,7 +10,8 @@
         </div>
 
         <div class="containerProducts">
-            <router-link to="/product" class="product"  v-for="product in productsList" :key="product">
+            <div class="product" v-for="product in productsList" :key="product">
+                <router-link v-bind:to="'/product/'+ product ">
                 <div class="productImg">
                     <img :src="linkMan" class="firstPic" alt="">
                     <img :src="linkWoman" class="secondPic" alt="">
@@ -43,6 +44,7 @@
                 </div>
                   
             </router-link>
+            </div>
         </div>
 
     </div>

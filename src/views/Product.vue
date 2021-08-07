@@ -21,6 +21,11 @@ import main from '../components/productMain.vue'
 import details from '../components/productAditionalInfo.vue'
 
 export default {
+    data() {
+        return {
+            productName: this.$route.params.name
+        }
+    },
     components : {
         'banner': banner,
         'mainContainer': main,

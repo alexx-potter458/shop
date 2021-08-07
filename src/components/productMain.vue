@@ -3,7 +3,7 @@
     <div class="myContainer">
       <div class="detailsContainer">
         <div class="details p-5">
-            <div class="title"> This product </div>
+            <div class="title"> {{ productName }} </div>
 
             <div class="d-flex flex-row mt-2">
                 <div class="price">$100</div> 
@@ -83,6 +83,11 @@
 
 <script>
 export default {
+    data() {
+        return {
+            productName: this.$route.params.name
+        }
+    },
     methods: {
         counter: function() {
             let number = document.getElementById('number');
