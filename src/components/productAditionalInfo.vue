@@ -118,7 +118,7 @@
                 <div>
                     <splide :options="options" data-splide='{"type":"loop","perPage":5, "focus":"center"}'>
                         <splide-slide class="p-5" v-for="product in productsList" :key="product">
-                            <router-link to="/product" class="product">
+                            <router-link v-bind:to="'/product/'+ product" class="product">
                                 <div class="productImg">
                                     <img :src="linkMan" class="firstPic" alt="">
                                     <img :src="linkWoman" class="secondPic" alt="">

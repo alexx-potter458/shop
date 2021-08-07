@@ -1,7 +1,7 @@
 <template>
    <div class="banner" id="banner">
           <i class="far check fa-check-circle"></i>
-          <span class="text">Shirt have been added to your cart.</span>
+          <span class="text">{{ productName }} have been added to your cart.</span>
           <span><a class="viewCart" href="">View Cart</a></span>
           <i id="close" class="fas x fa-times"></i>
           
@@ -11,6 +11,11 @@
 <script>
 
 export default {
+    data() {
+        return {
+            productName: this.$route.params.name
+        }
+    },
     methods: {
         close: function() {
             let closeViewCart = document.getElementById('close');
