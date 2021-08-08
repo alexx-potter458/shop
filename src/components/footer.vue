@@ -62,9 +62,9 @@
                 <a id="account">
                     <div class="px-2"> <i class="far fa-user-circle"></i> </div>
                 </a>
-                <a href="">
+                <router-link to="/wishlist">
                     <div class="px-2"> <i class="far fa-heart"></i> </div>
-                </a>
+                </router-link>
                 <a >
                     <div class="px-2"> <i class="fas fa-store"></i> </div>
                 </a>
