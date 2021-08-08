@@ -104,6 +104,7 @@ a {
         }
         
     }
+
     .input:focus {
         outline: none;
     }
@@ -144,16 +145,29 @@ a {
     top: 0;
     right: 0;
     width: 0vw;
-    height: 0vh;
+    height: 0vh;  
+}
 
-    
-    
+.cart {
+    visibility: hidden;
+    background-color: whitesmoke;
+    top: 0;
+    right: 0;
+    width: 0vw;
+    height: 0vh; 
 }
 
 .sideIsActive {
     position: fixed;
     visibility: visible;
     width: 25vw;
+    height: 100vh;
+}
+
+.cartIsActive {
+    position: fixed;
+    visibility: visible;
+    width: 45vw;
     height: 100vh;
 }
 
@@ -178,6 +192,104 @@ a {
     color: goldenrod;
 }
 
+.content {
+    color: gray;
+    font-weight: 500;
+    
+
+}
+.profilePic {
+    padding-right: 1em;
+    padding-bottom: 1em;
+}
+
+.profilePic img {
+    width: 50px;
+    height: 90px;
+    object-fit: cover;
+}
+
+.element {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.contentTitle {
+    font-weight: 500;
+}
+
+
+button {
+    height: fit-content;
+}
+
+.close {
+    border: none;
+    background: none;
+}
+
+.close i {
+    transition: .2s;
+}
+
+.close i:hover {
+    transform: rotate(90deg);
+}
+
+.contentTitle:hover {
+    color: black;
+}
+
+.subototal {
+    font-weight: 500;
+    margin-bottom: 1em;
+    font-size: 20px;
+}
+
+.buttons button {
+    border: none;
+    padding: 0.5em;
+    color: white;
+    background-color: rgb(36, 36, 36);
+    letter-spacing: 3px;
+    padding-left: 2em;
+    padding-right: 2em;
+    transition: .5s;
+    cursor: pointer;
+}
+
+.buttons button:hover {
+    background-color: black;
+}
+
+.buttons {
+    position: absolute;
+    bottom: 2em;
+    width: 70%;
+}
+
+.myBorder {
+    background-color: black;
+    height: 2px;
+
+    transform: translateX(-50%) scaleX(0);
+    transition: 0.5s;
+}
+
+.contentTitle:hover .myBorder {
+    transform: translateX(0%) scaleX(1);
+}
+
+#emptyList {
+    position: absolute;
+    top: 40%;
+    visibility: hidden;
+    left: 35%;
+    color: gray;
+    font-weight: 500;
+    font-size: 20px;
+}
 
 @media screen and (max-width: 920px) and (min-width: 550px) {
     .hideMiddle {

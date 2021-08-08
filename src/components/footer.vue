@@ -65,7 +65,7 @@
                 <router-link to="/wishlist">
                     <div class="px-2"> <i class="far fa-heart"></i> </div>
                 </router-link>
-                <a >
+                <a id="cartBtn">
                     <div class="px-2"> <i class="fas fa-store"></i> </div>
                 </a>
                 <a id="sideMenuBtn">
@@ -130,6 +130,44 @@
             </div>
         </div>
 
+        <div id="cart" class="cart">
+            <div class="m-5">
+                <div id="exitCart" class="mb-5"><i class="fas fa-times"></i></div>
+                <div class="list mx-5">
+            <div class="element" v-for="product in products" :key="product">
+
+                <div class="d-flex flex-row">
+                    <div class="image">
+                        <div class="profilePic">
+                            <img src="../assets/pictures/product/1.webp" alt="" />
+                        </div>
+                    </div>
+
+                    <div class="details mt-2">
+                        <router-link v-bind:to="'/product/' + product" class="contentTitle">{{product}}<div class="myBorder"></div></router-link>
+                        <div class="content">Quantity: 1</div>
+                        <div class="content"> Price: $40</div>
+                    </div>
+                </div>
+                <button class="close mt-3"><i class="fas fa-times"></i></button>
+
+            </div>
+
+            <div id="emptyList">
+                There is no item here
+            </div>
+
+            <div class="buttons d-flex flex-column">
+                <div class="subototal" > Subtotal: $450</div>
+                <button class="seeCart mb-2">SEE CART</button>
+                <button class="checkout">CHECKOUT</button>
+            </div>
+
+
+        </div>
+            </div>
+        </div>
+
     </div>
 
 </template>
@@ -139,6 +177,7 @@
 export default({
     data() {
         return {
+            products: ["Black blouse", "Crop top", "White tee"],
             categories: [{
                 selector:'Home',
                 subCategories: ['Home1', 'Home2', 'Home3']
@@ -158,6 +197,26 @@ export default({
             }
     },
     methods: {
+        removeItem: function() {
+            let list = document.getElementsByClassName('close');
+            let emptyList = document.getElementById("emptyList");
+
+            for(let element of list) {
+                element.addEventListener('click', () => {
+                    
+                    let myProdName = element.parentElement.getElementsByClassName('contentTitle')[0].innerText;
+                    let prodIndex = this.products.indexOf(myProdName);
+                    this.$delete(this.products, prodIndex);
+                    if(this.products.length == 0) {
+                       emptyList.style.visibility = 'visible' 
+                    }
+                    
+                })
+                
+            }
+
+        },
+
         loginForm: function() {
             let account = document.getElementById('account');
             let loginForm = document.getElementById('form')
@@ -193,6 +252,29 @@ export default({
                regBtn.classList.add('active')
                loginBtn.classList.remove('active')
             })
+        },
+        cart: function() {
+            let cartBtn = document.getElementById('cartBtn');
+            let cart = document.getElementById('cart');
+            let darkener = document.getElementById('darkener');
+            let exit = document.getElementById('exitCart');
+
+            cartBtn.addEventListener('click', function(){
+                cart.classList.toggle("cartIsActive");
+                darkener.classList.toggle('darkener');
+                document.body.style.overflow = 'hidden';
+            })
+            darkener.addEventListener('click', function(){
+                cart.classList.remove("cartIsActive");
+                darkener.classList.remove('darkener');
+                document.body.style.overflow = 'visible';
+            })
+            exit.addEventListener('click', function(){
+                cart.classList.remove("cartIsActive");
+                darkener.classList.remove('darkener');
+                document.body.style.overflow = 'visible';
+            })
+            
         },
         side: function() {
             let sideMenuBtn = document.getElementById('sideMenuBtn');
@@ -251,6 +333,8 @@ export default({
         this.loginForm();
         this.side();
         this.dropdown();
+        this.cart();
+        this.removeItem();
     }
 })
 
